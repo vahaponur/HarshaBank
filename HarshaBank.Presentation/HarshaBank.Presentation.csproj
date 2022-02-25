@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HarshaBank.Business\HarshaBank.Business.csproj" />
+    <ProjectReference Include="..\HarshaBank.Configuration\HarshaBank.Configuration.csproj" />
+    <ProjectReference Include="..\HarshaBank.Entities\HarshaBank.Entities.csproj" />
+    <ProjectReference Include="..\HarshaBank.Exceptions\HarshaBank.Exceptions.csproj" />
+  </ItemGroup>
+
+</Project>
