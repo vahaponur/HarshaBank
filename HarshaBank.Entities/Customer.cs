@@ -8,7 +8,10 @@ using System.Threading.Tasks;
 
 namespace HarshaBank.Entities
 {
-    public class Customer : ICustomer
+    /// <summary>
+    /// Represents Customer.
+    /// </summary>
+    public class Customer : ICustomer,ICloneable
     {
         #region Private Fields
         private Guid _customerID;
@@ -87,7 +90,14 @@ namespace HarshaBank.Entities
                 _mobile = value;
             }
         }
-        #endregion
 
+        #endregion
+        #region Methods
+
+        public object Clone()
+        {
+            return new Customer { Address = this.Address, City = this.City, Country = this.Country, CustomerCode = this.CustomerCode, CustomerID = this.CustomerID, CustomerName = this.CustomerName, Landmark = this.Landmark, Mobile = this.Mobile };
+        }
+        #endregion
     }
 }
